@@ -9,9 +9,9 @@ const outputNameRef = document.getElementById("name-output");
 
 // Функция для обновления спана
 function updateGreeting() {
-  return inputNameRef.value
-    ? (outputNameRef.textContent = inputNameRef.value)
-    : (outputNameRef.textContent = "незнакомец");
+  outputNameRef.textContent = inputNameRef.value
+    ? inputNameRef.value
+    : "незнакомец";
 }
 
 // Добавление слушателя события, чтобы спан обновлялся во время ввода значения в инпут
