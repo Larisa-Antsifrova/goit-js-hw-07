@@ -19,9 +19,7 @@ function validateInput() {
   if (currentInputLength === validLength) {
     inputRef.classList.add("valid");
     inputRef.classList.remove("invalid");
-  }
-
-  if (currentInputLength !== validLength) {
+  } else {
     inputRef.classList.add("invalid");
     inputRef.classList.remove("valid");
   }
