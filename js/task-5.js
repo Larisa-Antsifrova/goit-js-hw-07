@@ -1,5 +1,4 @@
-// Напиши скрипт который, при наборе текста
-// в инпуте input#name - input(событие input),
+// Напиши скрипт который, при наборе текста в инпуте input#name - input(событие input),
 // подставляет его текущее значение в span#name - output.
 // Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
 
@@ -7,7 +6,7 @@
 const inputNameRef = document.getElementById("name-input");
 const outputNameRef = document.getElementById("name-output");
 
-// Функция для обновления спана
+// Функция для обновления содержания спана
 function updateGreeting() {
   outputNameRef.textContent = inputNameRef.value || "незнакомец";
 }
