@@ -20,8 +20,11 @@ function increment() {
 // Если значение каунтера опускается до 0,
 // то значение остаётся 0 и не уходит в минус.
 function decrement() {
-  if (counterValue < 1) counterValue = 0;
-  if (counterValue >= 1) counterValue -= 1;
+  if (counterValue < 1) {
+    counterValue = 0;
+  } else {
+    counterValue -= 1;
+  }
 }
 
 //Добавление слушателей события на кнопки
