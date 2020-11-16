@@ -14,11 +14,14 @@ let counterValue = +counterRef.textContent;
 
 // Функция, увеличивающаязначение каунтера
 function increment() {
-  return (counterValue += 1);
+  counterValue += 1;
 }
-// Функция, уменьшающая значение каунтера. Если значение каунтера опускается до 0, то значение остаётся 0 и не уходит в минус.
+// Функция, уменьшающая значение каунтера.
+// Если значение каунтера опускается до 0,
+// то значение остаётся 0 и не уходит в минус.
 function decrement() {
-  return counterValue < 1 ? (counterValue = 0) : (counterValue -= 1);
+  if (counterValue < 1) counterValue = 0;
+  if (counterValue >= 1) counterValue -= 1;
 }
 
 //Добавление слушателей события на кнопки
