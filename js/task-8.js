@@ -15,6 +15,7 @@
 
 //Создай функцию destroyBoxes(), которая очищает div#boxes.
 
+// Вариант решения
 // Получение доступа к инпуту и кнопкам
 const inputNumberRef = document.querySelector("[type='number']");
 const createBtnRef = document.querySelector("[data-action='render']");
