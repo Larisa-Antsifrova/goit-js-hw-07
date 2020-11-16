@@ -21,8 +21,8 @@ const createBtnRef = document.querySelector("[data-action='render']");
 const cleanBtnRef = document.querySelector("[data-action='destroy']");
 
 // Получение доступа к узлу, в который будут помещаться созданные элементы.
-// Добавление базовых стилей для коллекции.
 const boxesHolder = document.getElementById("boxes");
+// Добавление базовых стилей для коллекции.
 boxesHolder.style.display = "flex";
 boxesHolder.style.flexWrap = "wrap";
 boxesHolder.style.alignItems = "center";
@@ -57,7 +57,7 @@ function createBoxes(amount) {
 
 // Функция для очистки коллекции
 function destroyBoxes() {
-  boxesHolder.querySelectorAll("div").forEach((el) => el.remove());
+  boxesHolder.innerHTML = "";
 }
 
 // Добавление слушателей событий на кнопки
