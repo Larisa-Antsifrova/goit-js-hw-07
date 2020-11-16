@@ -15,15 +15,15 @@ const ingredients = [
 
 // Получение ссылки на уже существующий в HTML ul
 const ingredientsList = document.getElementById("ingredients");
+// Проверка в консоли, что доступ получен
 console.log(ingredientsList);
 
 // Создание одного массива с созданными лишками для списка
-let items = [];
 const ingredientsItems = ingredients.map((el) => {
   const item = document.createElement("li");
   item.textContent = el;
-  items.push(item);
+  return item;
 });
 
 // Добавление лишек в узел ul
-ingredientsList.append(...items);
+ingredientsList.append(...ingredientsItems);
