@@ -16,7 +16,10 @@ const validLength = +inputRef.attributes["data-length"].value;
 function validateInput() {
   const currentInputLength = inputRef.value.length;
 
-  if (currentInputLength === validLength) {
+  if (currentInputLength === 0) {
+    inputRef.classList.remove("valid");
+    inputRef.classList.remove("invalid");
+  } else if (currentInputLength === validLength) {
     inputRef.classList.add("valid");
     inputRef.classList.remove("invalid");
   } else {
